@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+  	type="text/javascript" charset="utf-8"></script>
+	<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+  	type="text/javascript" charset="utf-8"></script>
+  	<link href="css/main.css" rel="stylesheet">
+  	<link href="estilo.css" rel="stylesheet">
+
+	<script src="jquery-3.4.1.min.js"></script>
+
+	<script>
+			function funcionar(){
+				document.getElementById("add").style.width = "650px";
+				document.getElementById("add").style.height = "350px";
+				document.getElementById("add").style.top = "50%";
+				document.getElementById("add").style.left = "50%";
+				document.getElementById("tudo").style.opacity = "0.5";
+			}
+
+
+			function desaparecer(){
+				document.getElementById("add").style.width = "0";
+				document.getElementById("add").style.height = "0";
+				document.getElementById("add").style.top = "-50%";
+				document.getElementById("add").style.left = "-50%";
+				document.getElementById("tudo").style.opacity = "10";
+			}
+
+			function enviar(){
+				let lat = document.getElementById("escondido").value;
+				let lon = document.getElementById("escondido1").value;
+				let nome = document.getElementById("nome").value;
+				let enderecoForm = document.getElementById("endereco").value;
+				let img = document.getElementById("fotoDados").src;
+
+				desaparecer();
+				
+			}
+
+			$(document).ready(function(e){
+
+
+				$("#arquivo").change(function(e){
+
+					if(this.files && this.files[0]){
+						var reader = new FileReader();
+						reader.onload = function(e){
+							$("#fotoDados").attr("src", e.target.result);
+						}
+							reader.readAsDataURL(this.files[0]);
+						}
+					});
+
+		});
+
+	</script>
+
+
+
+</head>
+<body id="corpo">
+	<div id="tudo">
+		<nav class="nav">
+			<div class="fundoElemento" >
+				<a class="elemento" href="login.html"><img src="imagens/perfil.png" width="50px" height="50px"></a>
+			</div>
+			<div class="fundoElemento">
+				<a class="elemento" href="#"><img src="imagens/iconecasa.png" width="50px" height="50px"></a>
+			</div>
+			<div class="fundoElemento">
+				<a class="elemento" href="#"><img src="imagens/chat.png" width="50px" height="50px"></a>
+			</div>
+		</nav>
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      			<a class="navbar-brand" href="#">Top navbar</a>
+		        <ul class="navbar-nav mr-auto">
+		          <li class="nav-item active">
+		            <a class="nav-link" href="#">Home</a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">Link</a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link disabled" href="#">Disabled</a>
+		          </li>
+		        </ul>
+		        <form class="form-inline mt-2 mt-md-0 position-absolute" style="right: 0px">
+		          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+		        </form>
+    	</nav>
+			<center class="metadeTela">
+				<div class="fundoPost">
+					<img src="imagens/perfil1.jpg" width="100%" height="300px">
+					<div class="fundoIconePost">
+						<a class="iconePost" href="#">
+							<img src="imagens/curtir.png" width="50px" height="50px">
+						</a>
+					</div>
+					<div class="fundoIconePost">
+						<a class="iconePost" href="#">
+							<img src="imagens/chat.png" width="50px" height="50px">
+						</a>
+					</div>
+					<div class="fundoIconePost">
+						<a class="iconePost" href="#">
+							<img src="imagens/localizacao.png" width="50px" height="50px">
+						</a>
+					</div>
+				</div>
+			</center>
+			<center class="metadeTela">
+				<div class="fundoPost">
+					<img src="imagens/perfil1.jpg" width="100%" height="300px">
+					<div class="fundoIconePost">
+						<a class="iconePost" href="#">
+							<img src="imagens/curtir.png" width="50px" height="50px">
+						</a>
+					</div>
+					<div class="fundoIconePost">
+						<a class="iconePost" href="#">
+							<img src="imagens/chat.png" width="50px" height="50px">
+						</a>
+					</div>
+					<div class="fundoIconePost">
+						<a class="iconePost" href="#">
+							<img src="imagens/localizacao.png" width="50px" height="50px">
+						</a>
+					</div>
+				</div>
+			</center>
+
+			<center class="metadeTela">
+				<div class="fundoPost">
+					<img src="imagens/perfil1.jpg" width="100%" height="300px">
+					<div class="fundoIconePost">
+						<a class="iconePost" href="#">
+							<img src="imagens/curtir.png" width="50px" height="50px">
+						</a>
+					</div>
+					<div class="fundoIconePost">
+						<a class="iconePost" href="#">
+							<img src="imagens/chat.png" width="50px" height="50px">
+						</a>
+					</div>
+					<div class="fundoIconePost">
+						<a class="iconePost" href="#">
+							<img src="imagens/localizacao.png" width="50px" height="50px">
+						</a>
+					</div>
+				</div>
+			</center>
+			<center class="metadeTela">
+				<div class="fundoPost">
+					<img src="imagens/perfil1.jpg" width="100%" height="300px">
+					<div class="fundoIconePost">
+						<a class="iconePost" href="#">
+							<img src="imagens/curtir.png" width="50px" height="50px">
+						</a>
+					</div>
+					<div class="fundoIconePost">
+						<a class="iconePost" href="#">
+							<img src="imagens/chat.png" width="50px" height="50px">
+						</a>
+					</div>
+					<div class="fundoIconePost">
+						<a class="iconePost" href="#">
+							<img src="imagens/localizacao.png" width="50px" height="50px">
+						</a>
+					</div>
+				</div>
+			</center>
+
+		<a class="botaoCanto d-flex justify-content-center" href="#" onclick="funcionar(this.id)">
+			<div class="display-1" style="color: white">+</div>
+		</a>
+	</div>
+	<div class="adicao" id="add">
+
+		<div class="segundaParteAdicao">
+			<form style="align-self: center; vertical-align: middle;" id="form">
+				<b class="letraForm">
+					Nome: <input type="text" name="" id="nome"><br>
+					Foto: <input type="file" name="" value="Insira foto" id="arquivo" style="margin-top: 10px"><br>
+					Localização: <input type="text" name="" id="endereco"><input type="submit" value="procurar" style="margin-left: 2px; margin-top: 10px" >
+					<center>
+						<div style="width: 350px; height: 200px; margin-top: 10px; border-style: solid; border-color: gray;" id="mapContainer"></div>
+					</center>
+				</b>
+			</form>
+		</div>
+
+		<div class="primeiraParteAdicao">
+			<div style="align-self: center; vertical-align: middle;">
+				<center><img src="imagens/perfil1.jpg" width="200px" height="200px" style="border-radius: 100px" id="fotoDados"><br>
+				<div style="margin-top: 10px">
+					<center>
+						<form>
+							<input type="button" name="" value="CANCELAR" onclick="desaparecer(this.id)">
+							<input type="button" name="" value="ENVIAR" onclick="enviar(this.id)"><input type="hidden" name="" id="escondido">
+							<input type="hidden" name="" id="escondido1">
+						</form>
+					</center>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+    <script>
+
+    var platform = new H.service.Platform({
+  'apikey': 'p_jmZePM5-cPPGQCRVVLZmBpNcMTKpOn9OwCn5-yNVI'
+});
+
+// Obtain the default map types from the platform object:
+var defaultLayers = platform.createDefaultLayers();
+
+// Instantiate (and display) a map object:
+var map = new H.Map(
+  document.getElementById('mapContainer'),
+  defaultLayers.vector.normal.map,
+  {
+    zoom: 14,
+    center: { lat: 52.5, lng: 13.4 }
+  });
+
+// Get the default map types from the platform object:
+var defaultLayers = platform.createDefaultLayers();
+
+var geocodingParams;
+
+// Define a callback function to process the geocoding response:
+var onResult = function (result) {
+  var locations = result.Response.View[0].Result,
+    position,
+    marker;
+  // Add a marker for each location found
+  for (i = 0; i < locations.length; i++) {
+    position = {
+      lat: locations[i].Location.DisplayPosition.Latitude,
+      lng: locations[i].Location.DisplayPosition.Longitude
+    };
+    map.setCenter(position);
+    marker = new H.map.Marker(position);
+    map.addObject(marker);
+    console.log(position);
+    document.getElementById("escondido").value = position.lat;
+    document.getElementById("escondido1").value = position.lng;
+  }
+};
+
+// Get an instance of the geocoding service:
+var geocoder = platform.getGeocodingService();
+    </script>
+
+    <script>
+    const form = document.getElementById('form')
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const input = document.getElementById("endereco").value + ", Brazil"
+      geocodingParams = { searchText: input };
+      geocoder.geocode(geocodingParams, onResult);
+
+    })
+  </script>
+
+</body>
+</html>
